@@ -3,7 +3,9 @@ package com.example.workout_tracker.view
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.workout_tracker.R
-import com.example.workout_tracker.data.model.ExerciseModel
+import com.example.workout_tracker.data.model.Exercise
+import com.example.workout_tracker.data.model.Routine
+import com.example.workout_tracker.data.model.Workout
 import com.example.workout_tracker.data.room.AppDatabase
 
 class MainActivity : AppCompatActivity() {
@@ -14,18 +16,41 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun testBD() {
-        val db = AppDatabase.getDatabase(this).ExerciseDAO()
-        val exer = ExerciseModel().apply{
-            this.name = "Bench Press"
-            this.sets = 4
-            this.reps = 10
+        val dbe = AppDatabase.getDatabase(this).ExerciseDAO()
+        val dbr = AppDatabase.getDatabase(this).RoutineDAO()
+        val dbw = AppDatabase.getDatabase(this).WorkoutDAO()
+        dbe.deleteAll()
+        dbr.deleteAll()
+        dbw.deleteAll()
+//        val exer = Exercise().apply{
+//            this.name = "Bench Press"
+//        }
+//        dbe.insert(exer)
+//        val exer2 = Exercise().apply{
+//            this.name = "Shoulder Press"
+//        }
+//        dbe.insert(exer2)
+        val rout = Routine().apply{
+            this.name = "MyRoutine"
         }
-        val sdp = ExerciseModel().apply{
-            this.name = "Shoulder Press"
-            this.sets = 4
-            this.reps = 10
+        val rout2 = Routine().apply{
+            this.name = "MyRoutine2"
         }
-        db.insert(exer)
-        db.insert(sdp)
+        dbr.insert(rout)
+        val work = Workout().apply{
+            this.name = "MyWorkout"
+            this.routineId = rout.id
+        }
+        val work2 = Workout().apply{
+            this.name = "MyWorkout2"
+            this.routineId = rout2.id
+        }
+        dbw.insert(work)
+        // Daqui pra baixo não funciona
+        val dbrw = AppDatabase.getDatabase(this).RoutineWithWorkoutsDAO()
+        val lr = dbrw.getStuff()
+        for (r in lr) {
+            println(r)
+        }
     }
 }
