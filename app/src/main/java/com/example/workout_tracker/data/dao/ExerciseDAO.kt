@@ -9,19 +9,18 @@ import com.example.workout_tracker.data.model.Exercise
 
 @Dao
 interface ExerciseDAO {
-
     @Insert
-    fun insert(p: Exercise): Long
+    fun insert(exercise: Exercise): Long
 
     @Update
-    fun update(p: Exercise): Int
+    fun update(exercise: Exercise): Int
 
     @Delete
-    fun delete(p: Exercise)
+    fun delete(exercise: Exercise)
 
     @Query("SELECT * FROM Exercise WHERE id = :id")
     fun getById(id: Int): Exercise
 
     @Query("DELETE FROM Exercise")
-    fun deleteAll(): Void
+    fun deleteAll(): Int
 }
