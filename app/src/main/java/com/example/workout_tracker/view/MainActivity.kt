@@ -4,19 +4,15 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
-import androidx.fragment.app.commit
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
-import com.example.workout_tracker.R
-import com.example.workout_tracker.FragmentRoutines
 import com.example.workout_tracker.R.id.fragmentContainerView
 import com.example.workout_tracker.data.model.Exercise
 import com.example.workout_tracker.data.model.Routine
 import com.example.workout_tracker.data.model.Workout
 import com.example.workout_tracker.data.room.AppDatabase
 import com.example.workout_tracker.databinding.ActivityMainBinding
-import kotlin.math.log
 
 class MainActivity : AppCompatActivity() {
     private var _binding: ActivityMainBinding? = null
@@ -25,14 +21,15 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         _binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
         setToolbar()
         newTestDB()
+        setContentView(binding.root)
     }
 
     private fun setToolbar() {
         val navHostFrag = supportFragmentManager.findFragmentById(fragmentContainerView) as NavHostFragment
         val navController = navHostFrag.navController
+        binding.bottomNavMenu.setupWithNavController(navController)
         val appBarConfiguration = AppBarConfiguration(navController.graph)
         binding.toolbar.setupWithNavController(navController, appBarConfiguration)
     }

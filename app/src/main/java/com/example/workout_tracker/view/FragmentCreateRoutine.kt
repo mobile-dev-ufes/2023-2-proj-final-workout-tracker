@@ -1,14 +1,13 @@
-package com.example.workout_tracker
+package com.example.workout_tracker.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.Navigation.findNavController
 import androidx.navigation.fragment.findNavController
+import com.example.workout_tracker.R
 import com.example.workout_tracker.databinding.FragmentCreateRoutineBinding
-import com.example.workout_tracker.databinding.FragmentRoutinesBinding
 
 
 class FragmentCreateRoutine : Fragment() {
