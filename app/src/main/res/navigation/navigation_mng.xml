@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_mng"
+    app:startDestination="@id/routines">
+
+    <fragment
+        android:id="@+id/routines"
+        android:name="com.example.workout_tracker.FragmentRoutines"
+        android:label="Routines"
+        tools:layout="@layout/fragment_routines" >
+        <action
+            android:id="@+id/action_routines_to_create_routine"
+            app:destination="@id/create_routine" />
+    </fragment>
+    <fragment
+        android:id="@+id/create_routine"
+        android:name="com.example.workout_tracker.FragmentCreateRoutine"
+        android:label="Create new routine"
+        tools:layout="@layout/fragment_create_routine" >
+        <action
+            android:id="@+id/action_create_routine_to_routines"
+            app:destination="@id/routines" />
+    </fragment>
+</navigation>
