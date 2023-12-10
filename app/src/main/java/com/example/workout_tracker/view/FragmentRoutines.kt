@@ -43,7 +43,9 @@ class FragmentRoutines : Fragment() {
         routineVM.getAllRoutines()
         val listener = object : OnRoutineListener {
             override fun onClick(p: Routine) {
-                Toast.makeText(activity, p.name, Toast.LENGTH_SHORT).show()
+                val action = FragmentRoutinesDirections.actionRoutinesFragmentToWorkoutsFragment(p.id)
+                findNavController().navigate(action)
+//                Toast.makeText(activity, "${p.id}: ${p.name}", Toast.LENGTH_SHORT).show()
             }
         }
         adapter.setListener(listener)

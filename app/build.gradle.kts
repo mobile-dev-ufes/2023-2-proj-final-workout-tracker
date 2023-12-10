@@ -2,6 +2,7 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("kotlin-kapt")
+    id("androidx.navigation.safeargs")
 }
 
 android {
@@ -42,7 +43,6 @@ android {
 }
 
 dependencies {
-
     implementation("androidx.room:room-runtime:2.4.3")
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
@@ -55,3 +55,4 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     kapt("androidx.room:room-compiler:2.4.3")
 }
+

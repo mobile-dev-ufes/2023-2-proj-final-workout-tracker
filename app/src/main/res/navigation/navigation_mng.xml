@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_routines_to_create_routine"
             app:destination="@id/createRoutineFragment" />
+        <action
+            android:id="@+id/action_routinesFragment_to_workoutsFragment"
+            app:destination="@id/workoutsFragment" />
     </fragment>
     <fragment
         android:id="@+id/createRoutineFragment"
@@ -31,6 +34,9 @@
         <action
             android:id="@+id/action_workouts_to_create_workout"
             app:destination="@id/createWorkoutFragment" />
+        <argument
+            android:name="routine_id"
+            app:argType="long" />
     </fragment>
     <fragment
         android:id="@+id/createWorkoutFragment"
