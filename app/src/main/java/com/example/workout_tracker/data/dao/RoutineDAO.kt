@@ -21,6 +21,9 @@ interface RoutineDAO {
     @Query("SELECT * FROM Routine WHERE id = :id")
     fun getById(id: Long): Routine
 
+    @Query("SELECT * FROM Routine")
+    fun getAll(): List<Routine>
+
     @Query("DELETE FROM Routine")
     fun deleteAll(): Int
 
