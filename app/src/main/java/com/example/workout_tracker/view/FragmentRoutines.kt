@@ -51,7 +51,7 @@ class FragmentRoutines : Fragment() {
         return binding.root
     }
     fun setObserver() {
-        routineVM.getListMsg().observe(this, Observer {
+        routineVM.getListMsg().observe(viewLifecycleOwner, Observer {
             if (it == Constants.BD_MSGS.NOT_FOUND){
                 Toast.makeText(activity, R.string.routine_list_not_found, Toast.LENGTH_SHORT).show()
             } else if (it == Constants.BD_MSGS.FAIL) {
@@ -59,7 +59,7 @@ class FragmentRoutines : Fragment() {
             }
         })
 
-        routineVM.getProdList().observe(this, Observer {
+        routineVM.getProdList().observe(viewLifecycleOwner, Observer {
             adapter.updateProdList(it)
         })
     }

@@ -12,7 +12,7 @@ class ListRoutineViewHolder(
     fun bindVH(routine: Routine){
         binding.textRoutineName.text = routine.name
 
-        binding.textRoutineName.setOnClickListener {
+        binding.routineIdButton.setOnClickListener {
             listener.onClick(routine)
         }
     }

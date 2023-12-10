@@ -10,5 +10,6 @@
     <string name="constraint_create_routine">Product id already exists</string>
     <string name="routine_list_not_found">Routine list not found</string>
     <string name="routine_fail_search">Problem searching routines</string>
+    <string name="routine_view_button">View</string>
 
 </resources>

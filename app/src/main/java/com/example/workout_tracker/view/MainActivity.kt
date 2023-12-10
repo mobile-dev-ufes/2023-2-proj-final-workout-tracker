@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         _binding = ActivityMainBinding.inflate(layoutInflater)
         setToolbar()
-        newTestDB()
+//        newTestDB()
         setContentView(binding.root)
     }
 
