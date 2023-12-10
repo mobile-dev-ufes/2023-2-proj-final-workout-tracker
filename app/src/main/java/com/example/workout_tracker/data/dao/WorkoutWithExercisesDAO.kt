@@ -9,5 +9,9 @@ import com.example.workout_tracker.data.model.WorkoutWithExercises
 interface WorkoutWithExercisesDAO {
     @Transaction
     @Query("SELECT * FROM Workout")
-    fun getWorkoutsWithExercises(): List<WorkoutWithExercises>
+    fun getWorkoutWithExercises(): List<WorkoutWithExercises>
+
+    @Transaction
+    @Query("SELECT * FROM Workout WHERE id = :workoutId")
+    fun getWorkoutWithExercisesById(workoutId: Long): WorkoutWithExercises
 }

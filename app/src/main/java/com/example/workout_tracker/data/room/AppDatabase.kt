@@ -11,7 +11,6 @@ import com.example.workout_tracker.data.dao.RoutineWithWorkoutsDAO
 import com.example.workout_tracker.data.dao.WorkoutDAO
 import com.example.workout_tracker.data.dao.WorkoutWithExercisesDAO
 import com.example.workout_tracker.data.model.Routine
-import com.example.workout_tracker.data.model.RoutineWithWorkouts
 import com.example.workout_tracker.data.model.Workout
 
 @Database(entities = [Exercise::class, Routine::class, Workout::class/*, RoutineWithWorkouts::class*/], version = 1)
@@ -20,9 +19,9 @@ abstract class AppDatabase(): RoomDatabase() {
     abstract fun RoutineDAO(): RoutineDAO
     abstract fun WorkoutDAO(): WorkoutDAO
 
-//    abstract fun WorkoutWithExercisesDAO(): WorkoutWithExercisesDAO
+    abstract fun WorkoutWithExercisesDAO(): WorkoutWithExercisesDAO
 
-//    abstract fun RoutineWithWorkoutsDAO(): RoutineWithWorkoutsDAO
+    abstract fun RoutineWithWorkoutsDAO(): RoutineWithWorkoutsDAO
     companion object {
         private lateinit var INSTANCE: AppDatabase
         fun getDatabase(context: Context): AppDatabase {

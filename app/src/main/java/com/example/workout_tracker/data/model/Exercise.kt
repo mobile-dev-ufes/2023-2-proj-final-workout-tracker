@@ -20,5 +20,5 @@ data class Exercise(
     var reps: Int = 0,
 
     @ColumnInfo(name = "workoutId")
-    var workoutId: Int = 0
+    var workoutId: Long = 0
 )

@@ -3,7 +3,6 @@ package com.example.workout_tracker.data.model
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import androidx.room.Relation
 
 @Entity(tableName = "Workout")
 data class Workout(
@@ -15,5 +14,5 @@ data class Workout(
     var name: String? = "",
 
     @ColumnInfo(name = "routineId")
-    var routineId: Int = 0
+    var routineId: Long = 0
 )

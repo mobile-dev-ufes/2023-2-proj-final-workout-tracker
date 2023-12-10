@@ -19,7 +19,7 @@ interface ExerciseDAO {
     fun delete(exercise: Exercise)
 
     @Query("SELECT * FROM Exercise WHERE id = :id")
-    fun getById(id: Int): Exercise
+    fun getById(id: Long): Exercise
 
     @Query("DELETE FROM Exercise")
     fun deleteAll(): Int
