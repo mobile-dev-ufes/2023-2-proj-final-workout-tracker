@@ -23,4 +23,22 @@
             android:id="@+id/action_create_routine_to_routines"
             app:destination="@id/routinesFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/workoutsFragment"
+        android:name="com.example.workout_tracker.view.FragmentWorkouts"
+        android:label="fragment_workouts"
+        tools:layout="@layout/fragment_workouts" >
+        <action
+            android:id="@+id/action_workouts_to_create_workout"
+            app:destination="@id/createWorkoutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createWorkoutFragment"
+        android:name="com.example.workout_tracker.view.FragmentCreateWorkout"
+        android:label="fragment_create_workout"
+        tools:layout="@layout/fragment_create_workout" >
+        <action
+            android:id="@+id/action_create_workout_to_workouts"
+            app:destination="@id/workoutsFragment" />
+    </fragment>
 </navigation>

@@ -9,25 +9,21 @@ import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import com.example.workout_tracker.R
 import com.example.workout_tracker.databinding.FragmentRoutinesBinding
+import com.example.workout_tracker.databinding.FragmentWorkoutsBinding
 
 
-class FragmentRoutines : Fragment() {
-    private var _binding: FragmentRoutinesBinding? = null
+class FragmentWorkouts : Fragment() {
+    private var _binding: FragmentWorkoutsBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                                   savedInstanceState: Bundle?): View {
         super.onCreateView(inflater, container, savedInstanceState)
-        _binding = FragmentRoutinesBinding.inflate(inflater, container, false)
-        binding.textRoutine.text = "TESTANDO FRAGMENT"
-        binding.textRoutine.setOnClickListener {
+        _binding = FragmentWorkoutsBinding.inflate(inflater, container, false)
+        binding.textWorkouts.text = "TESTANDO FRAGMENT WORKOUTS"
+        binding.textWorkouts.setOnClickListener {
             findNavController().navigate(
-                R.id.action_routines_to_create_routine/*,
-                                    null,
-                                    NavOptions.Builder()
-                                        .setPopUpTo(R.id.routinesFragment, true)
-                                        .build()*/
-                            )
+                R.id.action_workouts_to_create_workout)
         }
         return binding.root
     }
