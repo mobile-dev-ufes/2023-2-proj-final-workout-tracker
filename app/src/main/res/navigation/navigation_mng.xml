@@ -36,7 +36,8 @@
             app:destination="@id/createWorkoutFragment" />
         <argument
             android:name="routine_id"
-            app:argType="long" />
+            app:argType="long"
+            android:defaultValue="0L" />
     </fragment>
     <fragment
         android:id="@+id/createWorkoutFragment"

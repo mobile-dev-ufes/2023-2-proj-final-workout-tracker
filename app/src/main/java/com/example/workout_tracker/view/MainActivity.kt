@@ -39,8 +39,6 @@ class MainActivity : AppCompatActivity() {
         val routineDao = AppDatabase.getDatabase(this).RoutineDAO()
         val workoutDAO = AppDatabase.getDatabase(this).WorkoutDAO()
         val exerciseDAO = AppDatabase.getDatabase(this).ExerciseDAO()
-//        val routineWithWorkoutsDAO = AppDatabase.getDatabase(this).RoutineWithWorkoutsDAO()
-//        val workoutWithExercisesDAO = AppDatabase.getDatabase(this).WorkoutWithExercisesDAO()
 
         routineDao.deleteAll()
         workoutDAO.deleteAll()
@@ -57,12 +55,6 @@ class MainActivity : AppCompatActivity() {
 //        val ex2 = Exercise(name = "Squat", sets =  2, reps =  8, workoutId = w1Id)
 //        exerciseDAO.insert(ex1)
 //        exerciseDAO.insert(ex2)
-//
-//        val routineWithWorkouts = routineWithWorkoutsDAO.getRoutineWithWorkoutsById(r1Id)
-//        Log.d("RoutineWithWorkouts", routineWithWorkouts.toString())
-//
-//        val workoutWithExercises = workoutWithExercisesDAO.getWorkoutWithExercisesById(w1Id)
-//        Log.d("WorkoutWithExercises", workoutWithExercises.toString())
 //
 //        Toast.makeText(this, "Teste",Toast.LENGTH_LONG).show()
     }
