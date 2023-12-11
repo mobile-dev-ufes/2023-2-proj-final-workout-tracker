@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">Workout Tracker</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="ok" translatable="false">OK</string>
+    <string name="empty_routine_name_msg">Nome da ficha vazio</string>
+    <string name="empty_workout_name_msg">Nome do treino vazio</string>
+    <string name="success_create_routine">Rotina criada com sucesso</string>
+    <string name="fail_create_routine">Falha ao criar rotina</string>
+    <string name="constraint_create_routine">Id já existe</string>
+    <string name="routine_list_not_found">Lista de rotinas não encontrada</string>
+    <string name="routine_fail_search">Problema ao buscar rotinas</string>
+    <string name="view_button">Ver</string>
+    <string name="workout_list_not_found">Treino não encontrado</string>
+    <string name="workout_fail_search">Falha ao encontrar treino</string>
+    <string name="exercise_list_not_found">Exercício não encontrado</string>
+    <string name="exercise_fail_search">Falha ao encontrar exercício</string>
+    <string name="empty_exercise_name_msg">Nome do exercício vazio</string>
+    <string name="success_create_exercise">Exercício criado com sucesso</string>
+    <string name="fail_create_exercise">Falha ao criar exercício</string>
+    <string name="constraint_create_exercise">Id do exercício já existe</string>
+    <string name="sets_hint">Séries</string>
+    <string name="reps_hint">Repetições</string>
+    <string name="log_button">Gravar</string>
+    <string name="name_hint">Nome</string>
+</resources>

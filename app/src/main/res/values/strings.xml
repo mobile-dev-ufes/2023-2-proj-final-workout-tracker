@@ -1,14 +1,12 @@
 <resources>
-    <string name="app_name">workout_tracker</string>
+    <string name="app_name" translatable="false">Workout Tracker</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello monster fragment</string>
-    <string name="ok">OK</string>
-    <string name="name_hint">Name</string>
+    <string name="ok" translatable="false">OK</string>
     <string name="empty_routine_name_msg">Routine name is empty</string>
     <string name="empty_workout_name_msg">Workout name is empty</string>
     <string name="success_create_routine">Routine created with success</string>
     <string name="fail_create_routine">Create routine failed</string>
-    <string name="constraint_create_routine">Product id already exists</string>
+    <string name="constraint_create_routine">Id already exists</string>
     <string name="routine_list_not_found">Routine list not found</string>
     <string name="routine_fail_search">Problem searching routines</string>
     <string name="view_button">View</string>
@@ -23,5 +21,6 @@
     <string name="sets_hint">Sets</string>
     <string name="reps_hint">Reps</string>
     <string name="log_button">Log</string>
+    <string name="name_hint">Name</string>
 
 </resources>
