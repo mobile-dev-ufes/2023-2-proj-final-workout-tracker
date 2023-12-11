@@ -56,9 +56,9 @@ class FragmentWorkouts : Fragment() {
         workoutVM.getAllWorkouts(args.routineId)
         val listener = object : OnWorkoutListener {
             override fun onClick(p: Workout) {
-//                val action = FragmentWorkoutsDirections.actionWorkoutsFragmentToWorkoutsFragment(p.id)
-//                findNavController().navigate(action)
-                Toast.makeText(activity, "${p.id}: ${p.name}", Toast.LENGTH_SHORT).show()
+                val action = FragmentWorkoutsDirections.actionWorkoutsFragmentToFragmentExercises(p.id)
+                findNavController().navigate(action)
+//                Toast.makeText(activity, "${p.id}: ${p.name}", Toast.LENGTH_SHORT).show()
             }
         }
         adapter.setListener(listener)

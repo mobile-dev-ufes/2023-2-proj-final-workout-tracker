@@ -47,12 +47,12 @@ class MainActivity : AppCompatActivity() {
 //        val r1 = Routine(name = "Intermediario 2")
 //        val r1Id = routineDao.insert(r1)
 //
-        val w1 = Workout(name = "A", routineId = 167)
-        val w2 = Workout(name = "B", routineId = 167)
-        val w3 = Workout(name = "C", routineId = 167)
-        workoutDAO.insert(w1)
-        workoutDAO.insert(w2)
-        workoutDAO.insert(w3)
+//        val w1 = Workout(name = "A", routineId = 167)
+//        val w2 = Workout(name = "B", routineId = 167)
+//        val w3 = Workout(name = "C", routineId = 167)
+//        workoutDAO.insert(w1)
+//        workoutDAO.insert(w2)
+//        workoutDAO.insert(w3)
 //
 //        val ex1 = Exercise(name = "Bench", sets =  2, reps =  8, workoutId = w1Id)
 //        val ex2 = Exercise(name = "Squat", sets =  2, reps =  8, workoutId = w1Id)

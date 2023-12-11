@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.FragmentCreateWorkout">
+    tools:context=".view.FragmentCreateExercise">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -16,14 +16,30 @@
         >
 
         <EditText
-            android:id="@+id/createWorkoutName"
+            android:id="@+id/createExerciseName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/name_hint"
             />
 
+        <EditText
+            android:id="@+id/createExerciseSets"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/sets_hint"
+            android:layout_below="@+id/createExerciseName"
+            />
+
+        <EditText
+            android:id="@+id/createExerciseReps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/reps_hint"
+            android:layout_below="@+id/createExerciseSets"
+            />
+
         <Button
-            android:id="@+id/createWorkoutButton"
+            android:id="@+id/createExerciseButton"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"

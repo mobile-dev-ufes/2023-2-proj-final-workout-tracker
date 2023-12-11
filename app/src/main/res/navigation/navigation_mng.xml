@@ -38,6 +38,9 @@
             android:name="routine_id"
             app:argType="long"
             android:defaultValue="0L" />
+        <action
+            android:id="@+id/action_workoutsFragment_to_fragmentExercises"
+            app:destination="@id/fragmentExercises" />
     </fragment>
     <fragment
         android:id="@+id/createWorkoutFragment"
@@ -49,6 +52,32 @@
             app:destination="@id/workoutsFragment" />
         <argument
             android:name="routine_id"
+            app:argType="long"
+            android:defaultValue="0L" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentExercises"
+        android:name="com.example.workout_tracker.view.FragmentExercises"
+        android:label="fragment_exercises"
+        tools:layout="@layout/fragment_exercises" >
+        <action
+            android:id="@+id/action_fragmentExercises_to_fragmentCreateExercise"
+            app:destination="@id/fragmentCreateExercise" />
+        <argument
+            android:name="workout_id"
+            app:argType="long"
+            android:defaultValue="0L" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentCreateExercise"
+        android:name="com.example.workout_tracker.view.FragmentCreateExercise"
+        android:label="fragment_create_exercise"
+        tools:layout="@layout/fragment_create_exercise" >
+        <action
+            android:id="@+id/action_fragmentCreateExercise_to_fragmentExercises"
+            app:destination="@id/fragmentExercises" />
+        <argument
+            android:name="workout_id"
             app:argType="long"
             android:defaultValue="0L" />
     </fragment>

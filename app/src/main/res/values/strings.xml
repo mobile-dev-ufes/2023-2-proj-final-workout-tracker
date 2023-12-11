@@ -14,5 +14,14 @@
     <string name="view_button">View</string>
     <string name="workout_list_not_found">Workout not found</string>
     <string name="workout_fail_search">Fail to find workout</string>
+    <string name="exercise_list_not_found">Exercise not found</string>
+    <string name="exercise_fail_search">Fail to get exercises</string>
+    <string name="empty_exercise_name_msg">Empty exercise name</string>
+    <string name="success_create_exercise">Exercise created with success</string>
+    <string name="fail_create_exercise">Create exercise failed</string>
+    <string name="constraint_create_exercise">Exercise id already exists</string>
+    <string name="sets_hint">Sets</string>
+    <string name="reps_hint">Reps</string>
+    <string name="log_button">Log</string>
 
 </resources>
