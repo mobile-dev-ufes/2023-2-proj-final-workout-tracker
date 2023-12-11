@@ -4,6 +4,9 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
+/**
+ * Classe que representa um registro
+ * */
 @Entity(tableName = "Register")
 data class Register(
     @PrimaryKey(autoGenerate = true)

@@ -29,10 +29,16 @@ interface RegisterDAO {
     @Query("DELETE FROM Register")
     fun deleteAll(): Int
 
+    /**
+     * Essa query busca todos os exercícios
+     * */
     @Transaction
     @Query("SELECT * FROM Exercise")
     fun getExercisesWithRegisters(): List<ExerciseWithRegisters>
 
+    /**
+     * Essa query busca todos os exercícios com registros a partir do nome do exercício
+     * */
     @Transaction
     @Query("SELECT * FROM Exercise WHERE name = :exerciseName")
     fun getExercisesWithRegistersByName(exerciseName: String): ExerciseWithRegisters

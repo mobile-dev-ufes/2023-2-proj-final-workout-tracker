@@ -4,6 +4,9 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
+/**
+ * Classe que representa um treino
+ * */
 @Entity(tableName = "Workout")
 data class Workout(
     @PrimaryKey(autoGenerate = true)

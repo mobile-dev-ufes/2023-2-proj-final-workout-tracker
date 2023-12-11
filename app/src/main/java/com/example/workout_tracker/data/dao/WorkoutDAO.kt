@@ -30,10 +30,16 @@ interface WorkoutDAO {
     @Query("DELETE FROM Workout")
     fun deleteAll(): Int
 
+    /**
+     * Essa query busca todas as rotinas
+     * */
     @Transaction
     @Query("SELECT * FROM Routine")
     fun getRoutineWithWorkouts(): List<RoutineWithWorkouts>
 
+    /**
+     * Essa query busca todos as rotinas com exercícios a partir do id da rotina
+     * */
     @Transaction
     @Query("SELECT * FROM Routine WHERE id = :routineId")
     fun getRoutineWithWorkoutsById(routineId: Long): RoutineWithWorkouts

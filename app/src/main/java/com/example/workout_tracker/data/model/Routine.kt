@@ -5,6 +5,9 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import androidx.room.Relation
 
+/**
+ * Classe que representa uma rotina
+ * */
 @Entity(tableName = "Routine")
 data class Routine(
     @PrimaryKey(autoGenerate = true)

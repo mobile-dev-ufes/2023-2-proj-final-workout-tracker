@@ -13,6 +13,9 @@ import com.example.workout_tracker.data.model.Register
 import com.example.workout_tracker.data.model.Routine
 import com.example.workout_tracker.data.model.Workout
 
+/**
+ * O banco de dados ROOM do app
+ * */
 @Database(entities = [Exercise::class, Routine::class, Workout::class, Register::class], version = 1)
 abstract class AppDatabase(): RoomDatabase() {
     abstract fun ExerciseDAO(): ExerciseDAO

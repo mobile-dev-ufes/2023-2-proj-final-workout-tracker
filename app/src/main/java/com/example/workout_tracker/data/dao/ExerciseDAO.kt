@@ -29,11 +29,16 @@ interface ExerciseDAO {
     @Query("DELETE FROM Exercise")
     fun deleteAll(): Int
 
-
+    /**
+     * Essa query busca todos os treinos
+     */
     @Transaction
     @Query("SELECT * FROM Workout")
     fun getWorkoutWithExercises(): List<WorkoutWithExercises>
 
+    /**
+     * Essa query busca todos os treinos com exercícios a partir do id do treino
+     * */
     @Transaction
     @Query("SELECT * FROM Workout WHERE id = :workoutId")
     fun getWorkoutWithExercisesById(workoutId: Long): WorkoutWithExercises
