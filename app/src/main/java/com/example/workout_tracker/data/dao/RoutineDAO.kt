@@ -29,14 +29,6 @@ interface RoutineDAO {
     @Query("DELETE FROM Routine")
     fun deleteAll(): Int
 
-    @Transaction
-    @Query("SELECT * FROM Routine")
-    fun getRoutineWithWorkouts(): List<RoutineWithWorkouts>
-
-    @Transaction
-    @Query("SELECT * FROM Routine WHERE id = :routineId")
-    fun getRoutineWithWorkoutsById(routineId: Long): RoutineWithWorkouts
-
 //    @Query("SELECT * FROM Routine WHERE id = :id")
 //    suspend fun getRoutineWithWorkouts(id: Int): List<RoutineWithWorkouts>
 }

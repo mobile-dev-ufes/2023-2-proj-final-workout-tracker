@@ -19,7 +19,7 @@
             android:id="@+id/createRoutineName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/routine_name_hint"
+            android:hint="@string/name_hint"
             />
 
         <Button

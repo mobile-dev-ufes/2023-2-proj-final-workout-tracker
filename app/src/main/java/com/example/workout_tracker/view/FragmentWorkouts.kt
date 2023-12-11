@@ -43,7 +43,9 @@ class FragmentWorkouts : Fragment() {
         binding.recyclerListWorkouts.layoutManager = LinearLayoutManager(activity)
         binding.recyclerListWorkouts.adapter = adapter
         binding.createWorkout.setOnClickListener {
-            findNavController().navigate( R.id.action_workouts_to_create_workout)
+            val action = FragmentWorkoutsDirections.actionWorkoutsToCreateWorkout(args.routineId)
+            findNavController().navigate(action)
+//            findNavController().navigate( R.id.action_workouts_to_create_workout)
             /*,
                                     null,
                                     NavOptions.Builder()
@@ -51,7 +53,7 @@ class FragmentWorkouts : Fragment() {
                                         .build()*/
         }
         workoutVM = ViewModelProvider(this).get(FragmentWorkoutViewModel::class.java)
-        workoutVM.getAllWorkouts()
+        workoutVM.getAllWorkouts(args.routineId)
         val listener = object : OnWorkoutListener {
             override fun onClick(p: Workout) {
 //                val action = FragmentWorkoutsDirections.actionWorkoutsFragmentToWorkoutsFragment(p.id)

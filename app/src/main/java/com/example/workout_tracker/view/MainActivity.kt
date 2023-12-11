@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         _binding = ActivityMainBinding.inflate(layoutInflater)
         setToolbar()
-//        newTestDB()
+        newTestDB()
         setContentView(binding.root)
     }
 
@@ -40,16 +40,19 @@ class MainActivity : AppCompatActivity() {
         val workoutDAO = AppDatabase.getDatabase(this).WorkoutDAO()
         val exerciseDAO = AppDatabase.getDatabase(this).ExerciseDAO()
 
-        routineDao.deleteAll()
-        workoutDAO.deleteAll()
-        exerciseDAO.deleteAll()
-        return
+//        routineDao.deleteAll()
+//        workoutDAO.deleteAll()
+//        exerciseDAO.deleteAll()
 //
 //        val r1 = Routine(name = "Intermediario 2")
 //        val r1Id = routineDao.insert(r1)
 //
-//        val w1 = Workout(name = "A", routineId = r1Id)
-//        val w1Id = workoutDAO.insert(w1)
+        val w1 = Workout(name = "A", routineId = 167)
+        val w2 = Workout(name = "B", routineId = 167)
+        val w3 = Workout(name = "C", routineId = 167)
+        workoutDAO.insert(w1)
+        workoutDAO.insert(w2)
+        workoutDAO.insert(w3)
 //
 //        val ex1 = Exercise(name = "Bench", sets =  2, reps =  8, workoutId = w1Id)
 //        val ex2 = Exercise(name = "Squat", sets =  2, reps =  8, workoutId = w1Id)
@@ -57,6 +60,7 @@ class MainActivity : AppCompatActivity() {
 //        exerciseDAO.insert(ex2)
 //
 //        Toast.makeText(this, "Teste",Toast.LENGTH_LONG).show()
+        return
     }
 
 

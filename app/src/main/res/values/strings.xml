@@ -3,8 +3,9 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello monster fragment</string>
     <string name="ok">OK</string>
-    <string name="routine_name_hint">Name</string>
+    <string name="name_hint">Name</string>
     <string name="empty_routine_name_msg">Routine name is empty</string>
+    <string name="empty_workout_name_msg">Workout name is empty</string>
     <string name="success_create_routine">Routine created with success</string>
     <string name="fail_create_routine">Create routine failed</string>
     <string name="constraint_create_routine">Product id already exists</string>

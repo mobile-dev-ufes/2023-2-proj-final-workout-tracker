@@ -47,5 +47,9 @@
         <action
             android:id="@+id/action_create_workout_to_workouts"
             app:destination="@id/workoutsFragment" />
+        <argument
+            android:name="routine_id"
+            app:argType="long"
+            android:defaultValue="0L" />
     </fragment>
 </navigation>

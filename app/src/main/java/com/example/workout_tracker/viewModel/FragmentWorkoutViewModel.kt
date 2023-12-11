@@ -20,15 +20,15 @@ class FragmentWorkoutViewModel(application: Application): AndroidViewModel(appli
         return workoutList
     }
 
-    fun getAllWorkouts() {
+    fun getAllWorkouts(id: Long) {
         val db = AppDatabase.getDatabase(getApplication()).WorkoutDAO()
         try {
-            val resp = db.getAll()
+            val resp = db.getRoutineWithWorkoutsById(id)
             if (resp == null) {
                 listMsg.value = Constants.BD_MSGS.NOT_FOUND
             } else {
                 listMsg.value = Constants.BD_MSGS.SUCCESS
-                workoutList.value = resp
+                workoutList.value = resp.workouts
             }
         } catch (e: Exception) {
             listMsg.value = Constants.BD_MSGS.FAIL

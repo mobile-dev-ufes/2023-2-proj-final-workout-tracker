@@ -6,6 +6,7 @@ import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Transaction
 import androidx.room.Update
+import com.example.workout_tracker.data.model.RoutineWithWorkouts
 import com.example.workout_tracker.data.model.Workout
 import com.example.workout_tracker.data.model.WorkoutWithExercises
 
@@ -30,12 +31,13 @@ interface WorkoutDAO {
     fun deleteAll(): Int
 
     @Transaction
-    @Query("SELECT * FROM Workout")
-    fun getWorkoutWithExercises(): List<WorkoutWithExercises>
+    @Query("SELECT * FROM Routine")
+    fun getRoutineWithWorkouts(): List<RoutineWithWorkouts>
 
     @Transaction
-    @Query("SELECT * FROM Workout WHERE id = :workoutId")
-    fun getWorkoutWithExercisesById(workoutId: Long): WorkoutWithExercises
+    @Query("SELECT * FROM Routine WHERE id = :routineId")
+    fun getRoutineWithWorkoutsById(routineId: Long): RoutineWithWorkouts
+
 //    @Query("SELECT * FROM Workout WHERE id = :id")
 //    suspend fun getWorkouteWithExercises(id: Int): List<WorkoutWithExercises>
 }
