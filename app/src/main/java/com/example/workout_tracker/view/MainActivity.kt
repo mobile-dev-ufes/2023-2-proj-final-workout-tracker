@@ -44,12 +44,12 @@ class MainActivity : AppCompatActivity() {
 //        workoutDAO.deleteAll()
 //        exerciseDAO.deleteAll()
 //
-//        val r1 = Routine(name = "Intermediario 2")
+//        val r1 = Routine(id = 2, name = "Intermediario 2")
 //        val r1Id = routineDao.insert(r1)
 //
-//        val w1 = Workout(name = "A", routineId = 167)
-//        val w2 = Workout(name = "B", routineId = 167)
-//        val w3 = Workout(name = "C", routineId = 167)
+//        val w1 = Workout(name = "A", routineId = 2)
+//        val w2 = Workout(name = "B", routineId = 2)
+//        val w3 = Workout(name = "C", routineId = 2)
 //        workoutDAO.insert(w1)
 //        workoutDAO.insert(w2)
 //        workoutDAO.insert(w3)

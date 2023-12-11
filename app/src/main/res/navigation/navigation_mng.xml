@@ -3,13 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_mng"
-    app:startDestination="@id/routinesFragment">
+    app:startDestination="@id/routinesFragment"
+    >
 
     <fragment
         android:id="@+id/routinesFragment"
         android:name="com.example.workout_tracker.view.FragmentRoutines"
-        android:label="Routines"
-        tools:layout="@layout/fragment_routines" >
+        android:label="@string/routines_title"
+        tools:layout="@layout/fragment_routines"
+        >
         <action
             android:id="@+id/action_routines_to_create_routine"
             app:destination="@id/createRoutineFragment" />
@@ -20,7 +22,7 @@
     <fragment
         android:id="@+id/createRoutineFragment"
         android:name="com.example.workout_tracker.view.FragmentCreateRoutine"
-        android:label="Create new routine"
+        android:label="@string/create_new_routine_title"
         tools:layout="@layout/fragment_create_routine" >
         <action
             android:id="@+id/action_create_routine_to_routines"
@@ -29,7 +31,7 @@
     <fragment
         android:id="@+id/workoutsFragment"
         android:name="com.example.workout_tracker.view.FragmentWorkouts"
-        android:label="fragment_workouts"
+        android:label="@string/workouts_title"
         tools:layout="@layout/fragment_workouts" >
         <action
             android:id="@+id/action_workouts_to_create_workout"
@@ -45,7 +47,7 @@
     <fragment
         android:id="@+id/createWorkoutFragment"
         android:name="com.example.workout_tracker.view.FragmentCreateWorkout"
-        android:label="fragment_create_workout"
+        android:label="@string/create_new_workout_title"
         tools:layout="@layout/fragment_create_workout" >
         <action
             android:id="@+id/action_create_workout_to_workouts"
@@ -58,7 +60,7 @@
     <fragment
         android:id="@+id/fragmentExercises"
         android:name="com.example.workout_tracker.view.FragmentExercises"
-        android:label="fragment_exercises"
+        android:label="@string/exercises_title"
         tools:layout="@layout/fragment_exercises" >
         <action
             android:id="@+id/action_fragmentExercises_to_fragmentCreateExercise"
@@ -67,15 +69,35 @@
             android:name="workout_id"
             app:argType="long"
             android:defaultValue="0L" />
+        <action
+            android:id="@+id/action_fragmentExercises_to_fragmentCreateRegister"
+            app:destination="@id/fragmentCreateRegister" />
     </fragment>
     <fragment
         android:id="@+id/fragmentCreateExercise"
         android:name="com.example.workout_tracker.view.FragmentCreateExercise"
-        android:label="fragment_create_exercise"
+        android:label="@string/create_new_exercise_title"
         tools:layout="@layout/fragment_create_exercise" >
         <action
             android:id="@+id/action_fragmentCreateExercise_to_fragmentExercises"
             app:destination="@id/fragmentExercises" />
+        <argument
+            android:name="workout_id"
+            app:argType="long"
+            android:defaultValue="0L" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentCreateRegister"
+        android:name="com.example.workout_tracker.view.FragmentCreateRegister"
+        android:label="@string/create_new_register_title"
+        tools:layout="@layout/fragment_create_register" >
+        <action
+            android:id="@+id/action_fragmentCreateRegister_to_fragmentExercises"
+            app:destination="@id/fragmentExercises" />
+        <argument
+            android:name="exercise_id"
+            app:argType="long"
+            android:defaultValue="0L" />
         <argument
             android:name="workout_id"
             app:argType="long"

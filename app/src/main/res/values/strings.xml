@@ -22,5 +22,16 @@
     <string name="reps_hint">Reps</string>
     <string name="log_button">Log</string>
     <string name="name_hint">Name</string>
+    <string name="empty_register_name_msg">Empty register fields</string>
+    <string name="constraint_create_register">Register id already exists</string>
+    <string name="fail_create_register">Failed creating register</string>
+    <string name="success_create_register">Success creating register</string>
+    <string name="routines_title">Routines</string>
+    <string name="create_new_routine_title">Create new routine</string>
+    <string name="workouts_title">Workouts</string>
+    <string name="create_new_workout_title">Create new workout</string>
+    <string name="exercises_title">Exercises</string>
+    <string name="create_new_exercise_title">Create new exercise</string>
+    <string name="create_new_register_title">Create new register</string>
 
 </resources>

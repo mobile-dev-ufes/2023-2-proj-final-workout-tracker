@@ -15,7 +15,7 @@ class ListExerciseViewHolder(
     fun bindVH(exercise: Exercise){
         binding.textExerciseName.text = "${exercise.name} (${exercise.sets}/${exercise.reps})"
 
-        binding.exerciseIdButton.setOnClickListener {
+        binding.exerciseLogButton.setOnClickListener {
             listener.onClick(exercise)
         }
     }
