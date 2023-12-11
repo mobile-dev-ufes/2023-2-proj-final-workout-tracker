@@ -6,10 +6,10 @@
         android:title="Routines"
         />
 
-<!--    <item-->
-<!--        android:id="@+id/workoutsFragment"-->
-<!--        android:title="Workouts"-->
-<!--        />-->
+    <item
+        android:id="@+id/fragmentRegisters"
+        android:title="Registers"
+        />
 <!--        android:icon="@drawable/ic_launcher_foreground"-->
 
 </menu>

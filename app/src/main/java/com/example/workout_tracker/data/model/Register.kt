@@ -16,6 +16,6 @@ data class Register(
     @ColumnInfo(name = "reps")
     var reps: Int = 0,
 
-    @ColumnInfo(name = "exerciseId")
-    var exerciseId: Long = 0
+    @ColumnInfo(name = "exerciseName")
+    var exerciseName: String = ""
 )

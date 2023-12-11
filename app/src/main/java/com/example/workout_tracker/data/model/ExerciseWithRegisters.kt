@@ -8,8 +8,8 @@ data class ExerciseWithRegisters (
     @Embedded
     val exercise: Exercise,
     @Relation (
-        parentColumn = "id",
-        entityColumn = "exerciseId"
+        parentColumn = "name",
+        entityColumn = "exerciseName"
     )
     val registers: List<Register>
 )

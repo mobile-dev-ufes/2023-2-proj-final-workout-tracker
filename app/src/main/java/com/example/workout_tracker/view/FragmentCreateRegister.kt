@@ -42,7 +42,7 @@ class FragmentCreateRegister : Fragment(), View.OnClickListener {
                 Toast.makeText(activity, R.string.empty_register_name_msg, Toast.LENGTH_LONG).show()
                 return
             }
-            val p = Register(exerciseId = args.exerciseId, sets = sets.toInt(), reps = reps.toInt())
+            val p = Register(exerciseName = args.exerciseName!!, sets = sets.toInt(), reps = reps.toInt())
             createExerciseVM.saveRegister(p)
             val action = FragmentCreateRegisterDirections.actionFragmentCreateRegisterToFragmentExercises(args.workoutId)
             findNavController().navigate(action)

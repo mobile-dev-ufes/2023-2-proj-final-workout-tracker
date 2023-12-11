@@ -34,6 +34,6 @@ interface RegisterDAO {
     fun getExercisesWithRegisters(): List<ExerciseWithRegisters>
 
     @Transaction
-    @Query("SELECT * FROM Exercise WHERE id = :exerciseId")
-    fun getExercisesWithRegistersById(exerciseId: Long): List<ExerciseWithRegisters>
+    @Query("SELECT * FROM Exercise WHERE name = :exerciseName")
+    fun getExercisesWithRegistersByName(exerciseName: String): ExerciseWithRegisters
 }

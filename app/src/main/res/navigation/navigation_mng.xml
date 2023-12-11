@@ -95,12 +95,17 @@
             android:id="@+id/action_fragmentCreateRegister_to_fragmentExercises"
             app:destination="@id/fragmentExercises" />
         <argument
-            android:name="exercise_id"
-            app:argType="long"
-            android:defaultValue="0L" />
+            android:name="exercise_name"
+            app:argType="string"
+            app:nullable="true" />
         <argument
             android:name="workout_id"
             app:argType="long"
             android:defaultValue="0L" />
     </fragment>
+    <fragment
+        android:id="@+id/fragmentRegisters"
+        android:name="com.example.workout_tracker.view.FragmentRegisters"
+        android:label="@string/registers_title"
+        tools:layout="@layout/fragment_registers" />
 </navigation>

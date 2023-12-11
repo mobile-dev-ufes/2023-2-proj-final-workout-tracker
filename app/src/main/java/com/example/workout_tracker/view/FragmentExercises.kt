@@ -46,7 +46,7 @@ class FragmentExercises : Fragment() {
         exerciseVM.getAllExercises(args.workoutId)
         val listener = object : OnExerciseListener {
             override fun onClick(p: Exercise) {
-                val action = FragmentExercisesDirections.actionFragmentExercisesToFragmentCreateRegister(p.id, args.workoutId)
+                val action = FragmentExercisesDirections.actionFragmentExercisesToFragmentCreateRegister(p.name, args.workoutId)
                 findNavController().navigate(action)
 //                Toast.makeText(activity, "${p.id}: ${p.name}", Toast.LENGTH_SHORT).show()
             }
