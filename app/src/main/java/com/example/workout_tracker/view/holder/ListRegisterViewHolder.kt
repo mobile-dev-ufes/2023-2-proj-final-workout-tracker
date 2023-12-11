@@ -14,8 +14,7 @@ class ListRegisterViewHolder(
 ) : RecyclerView.ViewHolder(binding.root) {
     fun bindVH(register: Register){
         binding.textName.text = "${register.exerciseName}:"
-        binding.textSets.text = "Sets: ${register.sets}"
-        binding.textReps.text = "Reps: ${register.reps}"
+        binding.textReps.text = "(${register.sets}/${register.reps})"
     }
 
 
