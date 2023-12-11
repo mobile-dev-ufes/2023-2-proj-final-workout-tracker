@@ -2,7 +2,7 @@
 
 O Workout Tracker é um aplicativo desenvolvido para o projeto final da disciplina de Programação para Dispositivos Móveis do curso de Ciência da Computação da UFES.
 
-O aplicativo visa auxiliar praticantes de exercícios físicos e seu vídeo de apresentação está disponível nesse [link]().
+O aplicativo visa auxiliar praticantes de exercícios físicos e seu vídeo de apresentação está disponível nesse [link](https://youtu.be/4XYqY1mkBJ8).
 
 Tabela de conteúdos
 =================
