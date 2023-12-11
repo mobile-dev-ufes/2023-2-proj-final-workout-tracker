@@ -8,14 +8,13 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.workout_tracker.R
 import com.example.workout_tracker.data.model.Routine
 import com.example.workout_tracker.databinding.FragmentRoutinesBinding
 import com.example.workout_tracker.util.Constants
-import com.example.workout_tracker.viewModel.FragmentCreateRoutineViewModel
+import com.example.workout_tracker.view.adapter.ListRoutineAdapter
 import com.example.workout_tracker.viewModel.FragmentRoutineViewModel
 
 
@@ -61,7 +60,7 @@ class FragmentRoutines : Fragment() {
             }
         })
 
-        routineVM.getProdList().observe(viewLifecycleOwner, Observer {
+        routineVM.getRoutineList().observe(viewLifecycleOwner, Observer {
             adapter.updateProdList(it)
         })
     }

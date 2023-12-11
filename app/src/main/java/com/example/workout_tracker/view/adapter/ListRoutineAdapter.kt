@@ -1,10 +1,12 @@
-package com.example.workout_tracker.view
+package com.example.workout_tracker.view.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.workout_tracker.data.model.Routine
 import com.example.workout_tracker.databinding.RoutineLineBinding
+import com.example.workout_tracker.view.holder.ListRoutineViewHolder
+import com.example.workout_tracker.view.OnRoutineListener
 
 class ListRoutineAdapter : RecyclerView.Adapter<ListRoutineViewHolder>() {
 

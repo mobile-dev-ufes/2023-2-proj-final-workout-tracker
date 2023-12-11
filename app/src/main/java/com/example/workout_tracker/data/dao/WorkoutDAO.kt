@@ -23,6 +23,9 @@ interface WorkoutDAO {
     @Query("SELECT * FROM Workout WHERE id = :id")
     fun getById(id: Long): Workout
 
+    @Query("SELECT * FROM Workout")
+    fun getAll(): List<Workout>
+
     @Query("DELETE FROM Workout")
     fun deleteAll(): Int
 

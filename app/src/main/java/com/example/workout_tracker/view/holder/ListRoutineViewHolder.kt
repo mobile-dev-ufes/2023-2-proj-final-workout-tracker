@@ -1,9 +1,9 @@
-package com.example.workout_tracker.view
+package com.example.workout_tracker.view.holder
 
-import android.os.Bundle
 import androidx.recyclerview.widget.RecyclerView
 import com.example.workout_tracker.data.model.Routine
 import com.example.workout_tracker.databinding.RoutineLineBinding
+import com.example.workout_tracker.view.OnRoutineListener
 
 class ListRoutineViewHolder(
     private val binding: RoutineLineBinding,

@@ -21,14 +21,14 @@
             android:layout_height="match_parent"
             >
             <TextView
-                android:id="@+id/text_routine_name"
+                android:id="@+id/text_workout_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
                 />
 
             <Button
-                android:id="@+id/routine_id_button"
+                android:id="@+id/workout_id_button"
                 android:layout_width="50dp"
                 android:layout_height="30dp"
                 android:text="@string/view_button"
