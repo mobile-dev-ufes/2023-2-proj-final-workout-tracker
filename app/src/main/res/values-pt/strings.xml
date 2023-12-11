@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" translatable="false">Workout Tracker</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="ok" translatable="false">OK</string>
     <string name="empty_routine_name_msg">Nome da ficha vazio</string>
     <string name="empty_workout_name_msg">Nome do treino vazio</string>
     <string name="success_create_routine">Rotina criada com sucesso</string>
@@ -23,4 +21,18 @@
     <string name="reps_hint">Repetições</string>
     <string name="log_button">Gravar</string>
     <string name="name_hint">Nome</string>
+    <string name="empty_register_name_msg">Campo(s) de registro vazio(s)</string>
+    <string name="constraint_create_register">Id de registro já existe</string>
+    <string name="fail_create_register">Falha ao criar registro</string>
+    <string name="success_create_register">Registro criado com sucesso</string>
+    <string name="routines_title">Rotina</string>
+    <string name="create_new_routine_title">Criar nova rotina</string>
+    <string name="workouts_title">Treinos</string>
+    <string name="create_new_workout_title">Criar novo treino</string>
+    <string name="exercises_title">Exercícios</string>
+    <string name="create_new_exercise_title">Criar novo exercício</string>
+    <string name="create_new_register_title">Criar novo registro</string>
+    <string name="registers_title">Registros</string>
+    <string name="search_register_hint">Buscar exercício</string>
+    <string name="search_exercise_button">Buscar</string>
 </resources>
